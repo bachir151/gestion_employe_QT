@@ -51,7 +51,7 @@ void DatabaseConnection::ajouteEmploye(QString id, QString nom, QString prenom, 
     query.bindValue(":email", email);
     query.bindValue(":numero", numero);
 
-    if (!query.exec(requete)){
+    if (!query.exec()){
         QMessageBox::critical(nullptr, "Echec", "Données non enregistrée");
         return;
     } else {
